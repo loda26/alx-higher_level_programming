@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 import random
-import math
 number = random.randint(-10000, 10000)
 mod = abs(number) % 10
 if number < 0:
     mod = -mod
-print("Last digit of {:d} is {:d} and is ".format(number, mod), end=" ")
+print(f"Last digit of {number:d} is {mod:d} and is ", end=" ")
 if mod > 5:
     print("greater than 5")
 elif mod == 0;
