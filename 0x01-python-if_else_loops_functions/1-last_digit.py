@@ -7,7 +7,7 @@ if number < 0:
 print(f"Last digit of {number:d} is {mod:d} and is ", end=" ")
 if mod > 5:
     print("greater than 5")
-elif mod == 0;
+elif mod == 0:
     print("0")
 else:
     print("less than 6 and not 0")
