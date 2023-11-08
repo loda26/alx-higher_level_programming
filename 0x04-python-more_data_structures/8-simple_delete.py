@@ -1,4 +1,6 @@
 #!/usr/bin/python3
 def simple_delete(my_dict, key=""):
-    my_dict.pop(key, None)
-        return my_dict
+    if my_dict.get(key) is not None:
+        del my_dict[key]
+    return my_dict
+
