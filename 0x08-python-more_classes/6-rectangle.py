@@ -10,11 +10,7 @@ class Rectangle:
         """H & W"""
         self.height = height
         self.width = width
-        Rectangle.no_of_instances += 1
-
-    def __del__(self):
-        print("Bye rectangle...")
-        Rectangle.no_of_instances -= 1
+        type(self).no_of_instances += 1
     
     @property
     def width(self):
@@ -66,3 +62,7 @@ class Rectangle:
         rect = "Rectangle(" + str(self.__width)
         rect += ", " + str(self.__height) + ")"
         return (rect)
+    
+    def __del__(self):
+        type(self).no_of_instances -= 1
+        print("Bye rectangle...")
