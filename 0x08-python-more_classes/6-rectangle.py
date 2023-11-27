@@ -8,9 +8,9 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """H & W"""
+        type(self).no_of_instances += 1
         self.height = height
         self.width = width
-        type(self).no_of_instances += 1
     
     @property
     def width(self):
