@@ -97,10 +97,6 @@ class Rectangle(Base):
 		s = '\n' * self.y + (' ' * self.x + '#' * self.width + '\n') * self.height
 		print(s, end='')
 
-	def __str__(self):
-		"""Return the dictionary representation of a Rectangle."""
-		return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,self.x, self.y,self.width, self.height)
-
 	def __update(self, id=None, width=None, height=None, x=None, y=None):
 		"""internal method to handle the update"""
 		if id is not None:
@@ -120,3 +116,7 @@ class Rectangle(Base):
 			self.__update(*args)
 		elif kwargs:
 			self.__update(**kwargs)
+
+	def __str__(self):
+		"""Return the dictionary representation of a Rectangle."""
+		return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,self.x, self.y,self.width, self.height)
