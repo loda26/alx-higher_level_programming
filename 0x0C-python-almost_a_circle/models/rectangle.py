@@ -96,3 +96,8 @@ class Rectangle(Base):
 		# 	print("")
 		s = '\n' * self.y + (' ' * self.x + '#' * self.width + '\n') * self.height
 		print(s, end='')
+	
+
+	def __str__(self):
+		"""Return the dictionary representation of a Rectangle."""
+		return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,self.x, self.y,self.width, self.height)
