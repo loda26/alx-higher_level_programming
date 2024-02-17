@@ -14,8 +14,8 @@ if __name__ == '__main__':
                          db=argv[3])
 
     cur = db.cursor()
-    insert_stmt = f"<SELECT * FROM states WHERE name LIKE BINARY '{argv[4]}'>"
-    cur.execute(insert_stmt)
+    stmt = "SELECT * FROM states WHERE name LIKE BINARY '{}'".format(argv[4])
+    cur.execute(stmt)
 
     rows = cur.fetchall()
     for i in rows:
