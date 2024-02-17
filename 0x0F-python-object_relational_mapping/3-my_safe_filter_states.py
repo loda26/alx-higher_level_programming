@@ -16,8 +16,8 @@ if __name__ == '__main__':
                          db=argv[3])
 
     cur = db.cursor()
-    insert_stmt = "SELECT * FROM states WHERE BINARY name = %s", [argv[4]]
-    cur.execute(insert_stmt)
+    insert_stmt = "SELECT * FROM states WHERE BINARY name = %s"
+    cur.execute(insert_stmt, [argv[4]])
 
     rows = cur.fetchall()
     for i in rows:
