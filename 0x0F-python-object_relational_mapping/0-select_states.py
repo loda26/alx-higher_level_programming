@@ -11,7 +11,8 @@ if __name__ == '__main__':
                          db=argv[3])
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states")
+    insert_stmt = "SELECT * FROM states"
+    cur.execute(insert_stmt)
 
     rows = cur.fetchall()
     for i in rows:
